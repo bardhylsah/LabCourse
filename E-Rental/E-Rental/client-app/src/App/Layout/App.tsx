@@ -1,16 +1,15 @@
 import React, {useEffect, useState} from 'react';
-import logo from './logo.svg';
-import './App.css';
 import axios from 'axios';
 import { collapseTextChangeRangesAcrossMultipleVersions, setConstantValue } from 'typescript';
 import { Header, List } from 'semantic-ui-react';
+import {Activity} from '../Models/Activity'; 
 
 function App() {
-  const[activities, setActivities] = useState([]);
+  const[activities, setActivities] = useState<Activity[]>([]);
 
   useEffect(() =>{
-    axios.get('http://localhost:5000/api/activities').then(response =>{
-      console.log(response);
+    axios.get<Activity[]>('http://localhost:5000/api/activities').then(response =>{
+      
       setActivities(response.data);
     })
   }, [])
@@ -19,7 +18,7 @@ function App() {
       <Header as= 'h2' icon='users' content='Rental'/>
       
       <List>
-      {activities.map((activity: any) =>(
+      {activities.map(activity  =>(
             <List.Item key={activity.id}>
                 {activity.title}
      
