@@ -15,7 +15,7 @@ namespace Persistence
             {
                 new Activity
                 {
-                    Title = "AUDI",
+                   Name = "AUDI",
                     Date = DateTime.Now.AddMonths(-2),
                     Description = "A3 2020",
                     Category = "hatchback",
@@ -24,7 +24,7 @@ namespace Persistence
                 },
                 new Activity
                 {
-                    Title = "BMW",
+                    Name = "BMW",
                     Date = DateTime.Now.AddMonths(-1),
                     Description = "X5 2019",
                     Category = "SUV",
@@ -33,7 +33,7 @@ namespace Persistence
                 },
                 new Activity
                 {
-                    Title = "Mercedes Benz",
+                    Name = "Mercedes Benz",
                     Date = DateTime.Now.AddMonths(1),
                     Description = "C class 2017",
                     Category = "coupe",
@@ -42,7 +42,7 @@ namespace Persistence
                 },
                 new Activity
                 {
-                    Title = "Volkswagen",
+                    Name = "Volkswagen",
                     Date = DateTime.Now.AddMonths(2),
                     Description = "Golf 7 2017",
                     Category = "hatchback",
@@ -51,7 +51,7 @@ namespace Persistence
                 },
                 new Activity
                 {
-                    Title = "Skoda",
+                    Name = "Skoda",
                     Date = DateTime.Now.AddMonths(3),
                     Description = "Rapid 2020",
                     Category = "Sedan",
@@ -60,7 +60,7 @@ namespace Persistence
                 },
                 new Activity
                 {
-                    Title = "Citroen",
+                    Name = "Citroen",
                     Date = DateTime.Now.AddMonths(4),
                     Description = "C4 2016",
                     Category = "Hatchback",
@@ -69,7 +69,7 @@ namespace Persistence
                 },
                 new Activity
                 {
-                    Title = "Volkswagen",
+                    Name = "Volkswagen",
                     Date = DateTime.Now.AddMonths(5),
                     Description = "Tiguan 2017",
                     Category = "SUV",
@@ -78,7 +78,7 @@ namespace Persistence
                 },
                 new Activity
                 {
-                    Title = "Jaguar",
+                    Name = "Jaguar",
                     Date = DateTime.Now.AddMonths(6),
                     Description = "F Pace 2017",
                     Category = "SUV",
@@ -87,7 +87,7 @@ namespace Persistence
                 },
                 new Activity
                 {
-                    Title = "Audi",
+                    Name = "Audi",
                     Date = DateTime.Now.AddMonths(7),
                     Description = "A4 2021",
                     Category = "Sedan",
@@ -96,7 +96,7 @@ namespace Persistence
                 },
                 new Activity
                 {
-                    Title = "Volkswagen",
+                    Name = "Volkswagen",
                     Date = DateTime.Now.AddMonths(8),
                     Description = "Arteon 2020",
                     Category = "Sedan",
