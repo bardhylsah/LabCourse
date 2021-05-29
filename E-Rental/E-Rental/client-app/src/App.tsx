@@ -1,4 +1,6 @@
 import React, {useEffect, useState} from 'react';
+import Navbar from '../src/components/Navbar';
+import {BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import logo from './logo.svg';
 import './App.css';
 import axios from 'axios';
@@ -15,9 +17,13 @@ function App() {
     })
   }, [])
   return (
-    <div >
-      <Header as= 'h2' icon='users' content='Rental'/>
-      
+    <>
+    <Router>
+      <Navbar />
+      <Switch>
+        <Route path='/' exact />
+      </Switch>
+    <div>
       <List>
       {activities.map((activity: any) =>(
             <List.Item key={activity.id}>
@@ -27,6 +33,8 @@ function App() {
       ))}
        </List>
     </div>
+    </Router>
+    </>
   );
 }
 
