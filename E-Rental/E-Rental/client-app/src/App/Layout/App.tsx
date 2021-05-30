@@ -9,6 +9,7 @@ import { Header, List } from 'semantic-ui-react';
 import {Activity} from '../Models/Activity';
 import ActivityDashboard from '../../Features/activities/Dashboard/ActivitiesDashboard';
 import { Link } from 'react-router-dom';
+import Home from '../../components/pages/Home';
 
 
 
@@ -27,7 +28,7 @@ function App() {
       <Navbar />
        
       <Switch>
-        <Route path='/' exact />
+        <Route path='/' exact component= {Home} />
       </Switch>
     <div>
       <List>
