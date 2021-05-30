@@ -7,6 +7,7 @@ import axios from 'axios';
 import { collapseTextChangeRangesAcrossMultipleVersions, setConstantValue } from 'typescript';
 import { Header, List } from 'semantic-ui-react';
 import {Activity} from '../Models/Activity'; 
+import Home from '../../components/pages/Home';
 
 function App() {
   const[activities, setActivities] = useState<Activity[]>([]);
@@ -22,7 +23,7 @@ function App() {
     <Router>
       <Navbar />
       <Switch>
-        <Route path='/' exact />
+        <Route path='/' exact component= {Home} />
       </Switch>
     <div>
       <List>
