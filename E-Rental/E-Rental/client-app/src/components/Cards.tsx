@@ -15,6 +15,16 @@ function Cards() {
                        text='€17/day in France'
                        label='Try It'
                        path='/services' />
+                       <CardItem
+                       src={require('../components/images/car-2.jpg').default}
+                       text='£14/day in England'
+                       label=''
+                       path='/services' />
+                       <CardItem
+                       src={require('../components/images/Kia.png').default}
+                       text='$19/day in USA'
+                       label='Try It'
+                       path='/services' />
                    </ul>
                </div>
            </div>
