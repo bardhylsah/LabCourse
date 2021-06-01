@@ -11,7 +11,7 @@
     display: flex;
     flex-flow: column;
     align-items: center;
-    max-width: 1120px;
+    width: 1120px;
     width: 90%;
     margin: 0 auto;
   }
@@ -46,7 +46,7 @@
   
   .cards__item__pic-wrap {
     position: relative;
-    width: 100%;
+    width: 300px;
     padding-top: 67%;
     overflow: hidden;
   }
