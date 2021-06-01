@@ -2,8 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { Button } from './Button';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
+import { useStore } from '../App/stores/store';
+
 
 function Navbar() {
+  const {activityStore} = useStore();
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
 

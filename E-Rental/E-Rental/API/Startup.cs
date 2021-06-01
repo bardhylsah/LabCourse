@@ -17,6 +17,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using Persistence;
+using AutoMapper;
 
 
 namespace API
@@ -53,6 +54,8 @@ namespace API
            // app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            app.UseCors("CorsPolicy");
             
             app.UseCors("CorsPolicy");
 

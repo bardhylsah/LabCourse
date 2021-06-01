@@ -5,7 +5,8 @@ using System.Threading.Tasks;
 using Domain;
 
 namespace Persistence
-{     public class Seed
+{
+    public class Seed
     {
         public static async Task SeedData(DataContext context)
         {
@@ -15,91 +16,91 @@ namespace Persistence
             {
                 new Activity
                 {
-                   Name = "AUDI",
+                    Title = "Past Activity 1",
                     Date = DateTime.Now.AddMonths(-2),
-                    Description = "A3 2020",
-                    Category = "hatchback",
+                    Description = "Activity 2 months ago",
+                    Category = "drinks",
                     City = "London",
                     Venue = "Pub",
                 },
                 new Activity
                 {
-                    Name = "BMW",
+                    Title = "Past Activity 2",
                     Date = DateTime.Now.AddMonths(-1),
-                    Description = "X5 2019",
-                    Category = "SUV",
+                    Description = "Activity 1 month ago",
+                    Category = "culture",
                     City = "Paris",
                     Venue = "Louvre",
                 },
                 new Activity
                 {
-                    Name = "Mercedes Benz",
+                    Title = "Future Activity 1",
                     Date = DateTime.Now.AddMonths(1),
-                    Description = "C class 2017",
-                    Category = "coupe",
+                    Description = "Activity 1 month in future",
+                    Category = "culture",
                     City = "London",
                     Venue = "Natural History Museum",
                 },
                 new Activity
                 {
-                    Name = "Volkswagen",
+                    Title = "Future Activity 2",
                     Date = DateTime.Now.AddMonths(2),
-                    Description = "Golf 7 2017",
-                    Category = "hatchback",
+                    Description = "Activity 2 months in future",
+                    Category = "music",
                     City = "London",
                     Venue = "O2 Arena",
                 },
                 new Activity
                 {
-                    Name = "Skoda",
+                    Title = "Future Activity 3",
                     Date = DateTime.Now.AddMonths(3),
-                    Description = "Rapid 2020",
-                    Category = "Sedan",
+                    Description = "Activity 3 months in future",
+                    Category = "drinks",
                     City = "London",
-                    Venue = "Big Ben",
+                    Venue = "Another pub",
                 },
                 new Activity
                 {
-                    Name = "Citroen",
+                    Title = "Future Activity 4",
                     Date = DateTime.Now.AddMonths(4),
-                    Description = "C4 2016",
-                    Category = "Hatchback",
-                    City = "Dubai",
-                    Venue = "Burj Khalifa",
-                },
-                new Activity
-                {
-                    Name = "Volkswagen",
-                    Date = DateTime.Now.AddMonths(5),
-                    Description = "Tiguan 2017",
-                    Category = "SUV",
-                    City = "Dubai",
-                    Venue = "Burj Al - Arab",
-                },
-                new Activity
-                {
-                    Name = "Jaguar",
-                    Date = DateTime.Now.AddMonths(6),
-                    Description = "F Pace 2017",
-                    Category = "SUV",
-                    City = "Dubai",
-                    Venue = "Roundhouse",
-                },
-                new Activity
-                {
-                    Name = "Audi",
-                    Date = DateTime.Now.AddMonths(7),
-                    Description = "A4 2021",
-                    Category = "Sedan",
+                    Description = "Activity 4 months in future",
+                    Category = "drinks",
                     City = "London",
-                    Venue = "On the Thames",
+                    Venue = "Yet another pub",
                 },
                 new Activity
                 {
-                    Name = "Volkswagen",
+                    Title = "Future Activity 5",
+                    Date = DateTime.Now.AddMonths(5),
+                    Description = "Activity 5 months in future",
+                    Category = "drinks",
+                    City = "London",
+                    Venue = "Just another pub",
+                },
+                new Activity
+                {
+                    Title = "Future Activity 6",
+                    Date = DateTime.Now.AddMonths(6),
+                    Description = "Activity 6 months in future",
+                    Category = "music",
+                    City = "London",
+                    Venue = "Roundhouse Camden",
+                },
+                new Activity
+                {
+                    Title = "Future Activity 7",
+                    Date = DateTime.Now.AddMonths(7),
+                    Description = "Activity 2 months ago",
+                    Category = "travel",
+                    City = "London",
+                    Venue = "Somewhere on the Thames",
+                },
+                new Activity
+                {
+                    Title = "Future Activity 8",
                     Date = DateTime.Now.AddMonths(8),
-                    Description = "Arteon 2020",
-                    Category = "Sedan",
+                    Description = "Activity 8 months in future",
+                    Category = "film",
                     City = "London",
                     Venue = "Cinema",
                 }
