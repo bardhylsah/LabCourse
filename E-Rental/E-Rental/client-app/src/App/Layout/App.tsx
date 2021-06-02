@@ -8,6 +8,8 @@ import Home from '../../components/pages/Home';
 import LoadingComponent from './LoadingComponent';
 import { useStore } from '../stores/store';
 import { observer } from 'mobx-react-lite';
+import Service from '../../components/pages/Service';
+import Footer from '../../components/Footer';
 
 
 
@@ -33,10 +35,13 @@ function App() {
       <Switch>
         <Route path='/' exact component= {Home} />
       </Switch>
-
+      <Switch>
+      <Route path='/' exact component= {Service} />
       <Container style={{marginTop: '5em'}}>
         <ActivityDashboard />
        </Container>
+       </Switch>
+       <Footer />
       
     </Router>
     
