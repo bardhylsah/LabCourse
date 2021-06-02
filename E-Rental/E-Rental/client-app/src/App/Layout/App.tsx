@@ -1,27 +1,30 @@
-import React, {Component,useEffect, useState} from 'react';
+import React, {useEffect} from 'react';
 import Navbar from '../../components/Navbar';
 import {BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import logo from './logo.svg';
 import './App.css';
-import axios from 'axios';
-import { collapseTextChangeRangesAcrossMultipleVersions, setConstantValue } from 'typescript';
-import { Header, List } from 'semantic-ui-react';
-import {Activity} from '../Models/Activity';
-import ActivityDashboard from '../../Features/activities/Dashboard/ActivitiesDashboard';
-import { Link } from 'react-router-dom';
+import {Container} from 'semantic-ui-react';
+import ActivityDashboard from '../../Features/activities/Dashboard/ActivityDashboard';
 import Home from '../../components/pages/Home';
+import LoadingComponent from './LoadingComponent';
+import { useStore } from '../stores/store';
+import { observer } from 'mobx-react-lite';
 
 
 
 function App() {
-  const[activities, setActivities] = useState<Activity[]>([]);
+  const {activityStore} = useStore();
+
 
   useEffect(() =>{
-    axios.get<Activity[]>('http://localhost:5000/api/activities').then(response =>{
-      
-      setActivities(response.data);
-    })
-  }, [])
+      activityStore.loadActivities();
+  }, [activityStore])
+
+
+
+
+  if(activityStore.loadingInitial) return <LoadingComponent content='Loading app' />
+
+
   return (
     <>
     <Router>
@@ -30,16 +33,11 @@ function App() {
       <Switch>
         <Route path='/' exact component= {Home} />
       </Switch>
-    <div>
-      <List>
-      {activities.map(activity  =>(
-            <List.Item key={activity.id}>
-                {activity.title}
-     
-    </List.Item>
-      ))}
-       </List>
-    </div>
+
+      <Container style={{marginTop: '5em'}}>
+        <ActivityDashboard />
+       </Container>
+      
     </Router>
     
     </>
@@ -47,4 +45,4 @@ function App() {
   );
 }
 
-export default App;
+export default observer(App);

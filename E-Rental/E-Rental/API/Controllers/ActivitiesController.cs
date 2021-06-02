@@ -7,11 +7,12 @@ using Domain;
 using Microsoft.AspNetCore.Mvc;
 
 
+
 namespace API.Controllers
 {
     public class ActivitiesController : BaseApiController
     { 
-
+        
         [HttpGet]
         public async Task<ActionResult<List<Activity>>> GetActivities()
         {
@@ -30,14 +31,14 @@ namespace API.Controllers
 
         [HttpPut ("{id}")]
 
-        public async Task<ActionResult>EditActivity(Guid id, Activity activity)
+        public async Task<IActionResult> EditActivity(Guid id, Activity activity)
         {
             activity.Id=id;
             return Ok(await Mediator.Send(new Edit.Command{Activity =activity}));
         }
 
         [HttpDelete("{Id}")]
-        public async Task<IActionResult>DeleteActivity(Guid id)
+        public async Task<IActionResult> DeleteActivity(Guid id)
         {
             return Ok(await Mediator.Send(new Delete.Command{Id=id}));
         }
