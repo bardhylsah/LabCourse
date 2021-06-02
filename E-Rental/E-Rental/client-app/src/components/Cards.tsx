@@ -13,17 +13,17 @@ function Cards() {
                        <CardItem
                        src={require('../components/images/Twingo.png').default}
                        text='€17/day in France'
-                       label='Try It'
+                       label='Best Offer'
                        path='/services' />
                        <CardItem
                        src={require('../components/images/car-2.jpg').default}
                        text='£14/day in England'
-                       label=''
+                       label='Best Offer'
                        path='/services' />
                        <CardItem
                        src={require('../components/images/Kia.png').default}
                        text='$19/day in USA'
-                       label='Try It'
+                       label='Best Offer'
                        path='/services' />
                    </ul>
                </div>
