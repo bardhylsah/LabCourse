@@ -6,10 +6,9 @@ import {Container} from 'semantic-ui-react';
 import ActivityDashboard from '../../Features/activities/Dashboard/ActivityDashboard';
 import Home from '../../components/pages/Home';
 import LoadingComponent from './LoadingComponent';
-import { useStore } from '../stores/store';
+import { useStore } from '../stores/useStore';
 import { observer } from 'mobx-react-lite';
-import Service from '../../components/pages/Service';
-import Footer from '../../components/Footer';
+import LoginForm from "../../users/LoginForm";
 
 
 
@@ -34,14 +33,12 @@ function App() {
        
       <Switch>
         <Route path='/' exact component= {Home} />
+        <Route path='/login' component={LoginForm }/>
       </Switch>
-      <Switch>
-      <Route path='/' exact component= {Service} />
+
       <Container style={{marginTop: '5em'}}>
         <ActivityDashboard />
        </Container>
-       </Switch>
-       <Footer />
       
     </Router>
     

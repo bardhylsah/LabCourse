@@ -2,6 +2,7 @@ import React from 'react';
 import '../App/Layout/App.css';
 import { Button } from './Button';
 import './HeroSection.css';
+import LoginForm from '../users/LoginForm';
 
 function HeroSection () {
     return(
