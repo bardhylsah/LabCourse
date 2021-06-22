@@ -9,35 +9,25 @@ import LoadingComponent from './LoadingComponent';
 import { useStore } from '../stores/useStore';
 import { observer } from 'mobx-react-lite';
 import LoginForm from "../../users/LoginForm";
+import ActivityDetails from '../../Features/activities/details/ActivityDetails';
 
 
 
 function App() {
-  const {activityStore} = useStore();
-
-
-  useEffect(() =>{
-      activityStore.loadActivities();
-  }, [activityStore])
-
-
-
-
-  if(activityStore.loadingInitial) return <LoadingComponent content='Loading app' />
-
-
   return (
     <>
     <Router>
       <Navbar />
        
       <Switch>
-        <Route path='/' exact component= {Home} />
+        <Route exact path='/'  component= {Home} />
         <Route path='/login' component={LoginForm }/>
+        <Route exact path='/Vehicles' component={ActivityDashboard}/>
+        <Route  path='/Vehicles/:id' component={ActivityDetails}/>
       </Switch>
 
       <Container style={{marginTop: '5em'}}>
-        <ActivityDashboard />
+       <ActivityDashboard/>
        </Container>
       
     </Router>
