@@ -7,7 +7,6 @@ import LoginForm from '../users/LoginForm';
 
 
 function Navbar() {
-  const {activityStore} = useStore();
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
 

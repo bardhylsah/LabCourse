@@ -8,7 +8,7 @@ function HeroSection () {
     return(
     <div className='hero-container'>
         <video src={require('../components/videos/video-1.mp4').default} autoPlay loop muted />
-        <h1>Be Sure you get satisfied</h1>
+        <h1>Need a car for your next trip?</h1>
         <p>What are you waiting for?</p>
         <div className="hero-btns">
             <Button className='btns' buttonStyle='btn--outline'

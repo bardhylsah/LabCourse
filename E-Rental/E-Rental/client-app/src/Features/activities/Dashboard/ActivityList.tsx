@@ -34,7 +34,7 @@ export default observer (function ActivityList(){
 
                             </Item.Description>
                             <Item.Extra>
-                                <Button as={Link} to={'/Vehicles/>${activitiesByDate.id}'}
+                                <Button as={Link} to={'/Vehicles/${activity.id}'}
                                     floated='right' 
                                     content='View' 
                                     color='blue' 
