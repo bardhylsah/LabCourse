@@ -16,24 +16,24 @@ import ActivityDetails from '../../Features/activities/details/ActivityDetails';
 function App() {
   return (
     <>
-    <Router>
+    <Route exact path='/'  component= {Home} />
+   <Route 
+   path={'/(.+)'}
+   render={() =>(
+     <>
       <Navbar />
-       
       <Switch>
-        <Route exact path='/'  component= {Home} />
-        <Route path='/login' component={LoginForm }/>
-        <Route exact path='/Vehicles' component={ActivityDashboard}/>
-        <Route  path='/Vehicles/:id' component={ActivityDetails}/>
+        
+        <Route  path='/services'  component= {ActivityDashboard} />
+        <Route  path='/services/:id' component= {ActivityDetails} />
+        <Route path='/SignUp' component={LoginForm}/>
+        <Route path='/locations' />
+        <Route path='/contact' />
       </Switch>
-
-      <Container style={{marginTop: '5em'}}>
-       <ActivityDashboard/>
-       </Container>
-      
-    </Router>
-    
     </>
-    
+    )}
+    />
+    </>
   );
 }
 

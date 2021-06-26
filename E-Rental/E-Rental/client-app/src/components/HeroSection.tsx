@@ -3,6 +3,7 @@ import '../App/Layout/App.css';
 import { Button } from './Button';
 import './HeroSection.css';
 import LoginForm from '../users/LoginForm';
+import { Link } from 'react-router-dom';
 
 function HeroSection () {
     return(
@@ -15,7 +16,7 @@ function HeroSection () {
             buttonSize='btn--large'>Get Started</Button>
 
             <Button className='btns' buttonStyle='btn--primary'
-            buttonSize='btn--large'>Book right-away <i className='fas fa-chevron-right'/></Button>
+            buttonSize='btn--large'><Link to='/services'>Book right-away</Link> </Button>
         </div>
     </div>
     )

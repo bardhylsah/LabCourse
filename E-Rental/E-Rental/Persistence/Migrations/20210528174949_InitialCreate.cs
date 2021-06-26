@@ -20,7 +20,7 @@ namespace Persistence.Migrations
                     City = table.Column<string>(type: "TEXT", nullable: true),
                     Venue = table.Column<string>(type: "TEXT", nullable: true),
                     Available=table.Column<string>(type: "TEXT",nullable:true),
-                    Price=table.Column<Guid>(type:"TEXT",nullable:true)
+                    Price=table.Column<int>(type:"TEXT",nullable:true)
                 },
                 constraints: table =>
                 {
