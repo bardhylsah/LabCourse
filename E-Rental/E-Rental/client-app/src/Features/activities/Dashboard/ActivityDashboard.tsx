@@ -6,6 +6,7 @@ import ActivityDetails from '../details/ActivityDetails';
 import ActivityForm from '../form/ActivityForm';
 import ActivityList from './ActivityList';
 import LoadingComponent from '../../../App/Layout/LoadingComponent';
+import ActivityFilters from './ActivityFilters';
 
 
 export default observer (function ActivityDashboard() {
@@ -32,10 +33,7 @@ export default observer (function ActivityDashboard() {
                 <ActivityList /> 
             </Grid.Column>
             <Grid.Column width='6'>
-                {selectedActivity && !editMode &&
-                <ActivityDetails/>}
-                {editMode && 
-                <ActivityForm/>}
+                <ActivityFilters/>
             </Grid.Column>
         </Grid>
     )
