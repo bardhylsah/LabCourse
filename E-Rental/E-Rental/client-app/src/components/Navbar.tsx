@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import './Navbar.css';
 import { useStore } from '../App/stores/useStore';
 import LoginForm from '../users/LoginForm';
+import { NavLink } from 'react-bootstrap';
 
 
 function Navbar() {
@@ -80,6 +81,15 @@ function Navbar() {
                 onClick={closeMobileMenu}
               >
                 Sign Up
+              </Link>
+            </li>
+            <li>
+              <Link
+                to='/errors'
+                className='nav-links-mobile'
+                onClick={closeMobileMenu}
+              >
+                Errors
               </Link>
             </li>
           </ul>

@@ -5,12 +5,17 @@
     "cors": "^2.8.5",
     "date-fns": "^2.22.1",
     "formik": "^2.2.9",
+    "passport-local": "^1.0.0",
     "react-calendar": "^3.4.0",
+    "react-google-recaptcha": "^2.1.0",
     "react-router-dom": "^5.2.0",
     "semantic-ui-css": "^2.4.1",
-    "semantic-ui-react": "^2.0.3"
+    "semantic-ui-react": "^2.0.3",
+    "uui": "^1.0.7",
+    "uuid": "^3.4.0"
   },
   "devDependencies": {
+    "@types/react-google-recaptcha": "^2.1.0",
     "@types/react-router-dom": "^5.1.7",
     "node-sass": "^6.0.0"
   },
