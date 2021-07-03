@@ -31,13 +31,10 @@ export default function ActivityListItem({activity}: Props){
                             <Item.Header as ={Link} to={'/services/${services.id}'}>
                                 {activity.title}
                             </Item.Header>
-                            <Item.Description>Reserved</Item.Description>
+                            
                         </Item.Content>
                     </Item>
                 </Item.Group>
-           </Segment>
-           <Segment secondary>
-               Attendees go here
            </Segment>
            <Segment clearing>
                 <span>{activity.description}</span>

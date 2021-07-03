@@ -13,7 +13,9 @@ import ActivityDetails from '../../Features/activities/details/ActivityDetails';
 import TestErrors from '../../Features/activities/errors/TestErrors';
 import {ToastContainer} from 'react-toastify';
 import NotFound  from '../../Features/activities/errors/NotFound';
-import ContactUs from '../../Contact/ContactUs';
+import Contact from '../../Contact/Contact';
+
+
 
 
 
@@ -33,7 +35,7 @@ function App() {
         <Route  path='/services/:id' component= {ActivityDetails} />
         <Route path='/SignUp' component={LoginForm}/>
         <Route path='/locations' />
-        <Route path='/contact' component={ContactUs} />
+        <Route path='/contact' component={Contact} />
         <Route path='/errors' component={TestErrors}/>
         <Route component={NotFound}/>
       </Switch>

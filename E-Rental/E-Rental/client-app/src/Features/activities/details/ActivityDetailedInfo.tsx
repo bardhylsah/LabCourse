@@ -15,6 +15,7 @@ export default observer(function ActivityDetailedInfo({ activity }: Props) {
                 <Grid>
                     <Grid.Column width={1}>
                         <Icon size='large' color='teal' name='info' />
+                        <h2>Car</h2>
                     </Grid.Column>
                     <Grid.Column width={15}>
                         <p>{activity.description}</p>
