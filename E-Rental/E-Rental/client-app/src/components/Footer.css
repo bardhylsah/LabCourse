@@ -71,8 +71,10 @@
     margin-bottom: 16px;
   }
   
-  .footer-link-items > h2 {
-    color: #fff;
+  .footer-link-items > h3 {
+    color:crimson;
+    font-size: 25px;
+    font-style: bold;
   }
   
   .footer-link-items a {
@@ -165,6 +167,7 @@
       flex-direction: column;
     }
   }
+  
   
   @media screen and (max-width: 768px) {
   }
