@@ -3,7 +3,7 @@ import React, { ChangeEvent, useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import { Button, FormField, Header, Label, Segment } from 'semantic-ui-react';
 import LoadingComponent from '../../../App/Layout/LoadingComponent';
-import { useStore } from '../../../App/stores/useStore';
+import { useStore } from '../../../App/store/useStore';
 import {Formik, Form, Field, ErrorMessage} from 'formik';
 import { values } from 'mobx';
 import  *  as Yup from 'yup';
@@ -58,9 +58,9 @@ export default observer (function ActivityForm() {
                 ...activity,
                 id: uuid()
             };
-            createActivity(newActivity).then(() => history.push(`/activities/${newActivity.id}`))
+            createActivity(newActivity).then(() => history.push(`/services/${newActivity.id}`))
         } else {
-            updateActivity(activity).then(() => history.push(`/activities/${activity.id}`))
+            updateActivity(activity).then(() => history.push(`/services/${activity.id}`))
         }
     }
     if(loadingInitial) return<LoadingComponent content='Loading activity..'/>

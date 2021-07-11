@@ -1,7 +1,7 @@
 import { observer } from 'mobx-react-lite';
 import React, { useEffect } from 'react';
 import { Grid} from 'semantic-ui-react';
-import { useStore } from '../../../App/stores/useStore';
+import { useStore } from '../../../App/store/useStore';
 import ActivityDetails from '../details/ActivityDetails';
 import ActivityForm from '../form/ActivityForm';
 import ActivityList from './ActivityList';
@@ -21,9 +21,7 @@ export default observer (function ActivityDashboard() {
   }, [activityRegistry.size, loadActivities])
 
 
-
-
-  if(activityStore.loadingInitial) return <LoadingComponent content='Loading app' />
+  if(activityStore.loadingInitial) return <LoadingComponent content='Loading cars...' />
 
     
 

@@ -7,7 +7,7 @@ import 'react-datepicker/dist/react-datepicker.css';
 import './App/Layout/style.css';
 import App from './App/Layout/App';
 import reportWebVitals from './reportWebVitals';
-import { store, StoreContext } from './App/stores/useStore';
+import { store, StoreContext } from './App/store/useStore';
 import { BrowserRouter , Router} from 'react-router-dom';
 import {createBrowserHistory} from 'history';
 import './index.css';

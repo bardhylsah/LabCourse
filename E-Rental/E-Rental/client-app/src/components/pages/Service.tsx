@@ -1,7 +1,7 @@
 import react, { useEffect } from 'react';
 import '../../App/Layout/App.css';
 import LoadingComponent from '../../App/Layout/LoadingComponent';
-import { useStore } from '../../App/stores/useStore';
+import { useStore } from '../../App/store/useStore';
 import { observer } from 'mobx-react-lite';
 import React from 'react';
 import ActivityDashboard from '../../Features/activities/Dashboard/ActivityDashboard';

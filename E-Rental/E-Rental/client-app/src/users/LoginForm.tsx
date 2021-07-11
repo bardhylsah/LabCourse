@@ -5,12 +5,15 @@ import React from 'react';
 import { Button, Label } from 'semantic-ui-react';
 import { isConstructorDeclaration } from 'typescript';
 import MyTextInput from '../App/common/form/MyTextInput';
-import { useStore } from '../App/stores/useStore';
+import { useStore } from '../App/store/useStore';
 import './Login.css'
 import images from './images.jpg';
+import ModalStore from '../App/store/modalStore';
+import RegisterForm from './RegisterForm';
+import { Link } from 'react-router-dom';
 
 export default observer( function LoginForm(){
-    const{userStore}= useStore();
+    const{userStore, modalStore}= useStore();
 
     return(
         <div className="back" 
@@ -35,7 +38,10 @@ export default observer( function LoginForm(){
                 <Button style={{
                     marginTop: 20,
                     height: 50,}} 
-                loading={isSubmitting} positive content='Login'  type ='submit' fluid/>
+                loading={isSubmitting} positive content='Login' type ='submit' fluid/>
+
+                <p >Don't have a acount?</p>
+                <strong onClick={()=> modalStore.openModal(<RegisterForm/>)}>Create account</strong>
 
                  <div id="alternativeLogin">
                      <label>Or sign in with:</label>

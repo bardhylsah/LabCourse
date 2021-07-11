@@ -2,7 +2,7 @@ import React, { SyntheticEvent } from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button, Item, ItemDescription, Label, Segment } from 'semantic-ui-react';
-import { useStore } from "../../../App/stores/useStore";
+import { useStore } from "../../../App/store/useStore";
 import {Activity} from "../../../App/Models/Activity";
 import {format} from 'date-fns'; 
 

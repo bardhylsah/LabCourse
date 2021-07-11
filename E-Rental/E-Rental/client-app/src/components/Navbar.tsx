@@ -2,15 +2,17 @@ import React, { useState, useEffect } from 'react';
 import { Button } from './Button';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
-import { useStore } from '../App/stores/useStore';
+import { useStore } from '../App/store/useStore';
 import LoginForm from '../users/LoginForm';
 import { NavLink } from 'react-bootstrap';
+import { Dropdown, Image, Menu } from 'semantic-ui-react';
 
 
 
 function Navbar() {
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
+  const { userStore: { user, logout, isLoggedIn } } = useStore();
 
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
@@ -84,17 +86,21 @@ function Navbar() {
                 Sign Up
               </Link>
             </li>
-            <li>
-              <Link
-                to='/errors'
-                className='nav-links-mobile'
-                onClick={closeMobileMenu}
-              >
-                Errors
-              </Link>
-            </li>
           </ul>
           {button && <Button link to='/login' buttonStyle='btn--outline'>SIGN UP</Button>}
+          <>
+          <Menu.Item position='right'>
+                    <Image src={user?.image || '/assets/user.png'} avatar spaced='right' />
+                    <Dropdown pointing='top left'  text={user?.displayName}>
+                        <Dropdown.Menu>
+                            <Dropdown.Item as={Link} to={`/profiles/${user?.username}`} 
+                                text='My Profile' icon='user' />
+                            <Dropdown.Item onClick={logout} text='Logout' icon='power' />
+                        </Dropdown.Menu>
+                    </Dropdown>
+                </Menu.Item>
+                </>
+          
         </div>
       </nav>
     </>
