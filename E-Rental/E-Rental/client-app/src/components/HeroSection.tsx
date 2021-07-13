@@ -15,7 +15,7 @@ function HeroSection () {
             buttonSize='btn--large'><Link to='/SignUp'>Get Started</Link></Button>
 
             <Button className='btns' buttonStyle='btn--primary'
-            buttonSize='btn--large'><Link to='/SignUp'>Book right-away</Link> </Button>
+            buttonSize='btn--large'><Link to='/services'>Book right-away</Link> </Button>
         </div>
     </div>
     )

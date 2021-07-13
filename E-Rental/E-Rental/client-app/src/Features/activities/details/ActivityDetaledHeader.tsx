@@ -15,7 +15,7 @@ const activityImageTextStyle = {
     left: '5%',
     width: '100%',
     height: 'auto',
-    color: 'white'
+    color: 'white',
 };
 
 interface Props {
